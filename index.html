@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -11,8 +10,96 @@
         <script defer src="js/main.js"></script>
     </head>
     <body>
+        <header>
+            <h1 id="game-title">CONNECT FOUR</h1>
+            <h3>Click any of the buttons to play!</h3>
+            <h2 id="game-status">Game Status</h2>
+        </header>
+        <main>
+            <section id="play-buttons">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
         
-        
-       
+            <table id="board" class="board">
+                <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                </tr>
+                <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                </tr>
+                <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                </tr>
+                <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                </tr>
+                <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                </tr>
+                <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                </tr>
+            </table>
+        </main>
+        <aside class="aside">
+            <span class="sound-choice">Sound On/Off</span>
+            <label class="switch">
+                <input id="sound-on" type="checkbox">
+                <span class="slider round"></span>
+                <!-- <audio id="sound" controls loop>
+                    <source src"" type="audio/">
+                </audio>  -->
+            </label>
+            <div class="scores">
+                <span class="yellow-score">Yellow Score: 0</span>
+                <span class="red-score">Red Score: 0</span>
+            </div>    
+        </aside>
+        <footer>
+            <button id="reset-game">Play Again</button>
+        </footer>
     </body>
 </html>
+
