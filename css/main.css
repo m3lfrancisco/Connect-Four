@@ -4,17 +4,24 @@
 
 body {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     height: 100dvh;
 }
 
-#game-title {
+/* header {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+} */
+
+#game-title { 
     font-size: 2.5vw;
     margin: 1vmin;
     text-align: center;
-}
+} 
 
 h3 {
     font-size: 1.5vw;
@@ -31,15 +38,17 @@ main {
     display: grid;
     background-color: blue;
     border: .3vh solid black;
+    /* width: 50vw; */
 }
 
 #board {
     grid-template-columns: repeat(7, 8vmin);
     grid-template-rows: repeat(6, 8vmin);
-    gap: 2vmin;
+    /* gap: 2vmin; */
     height: 60vmin;
+    /* width: auto; */
     width: 74vmin;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 #play-buttons {
@@ -47,15 +56,17 @@ main {
     grid-template-columns: repeat(7, 8vmin);
     padding-top: 1.5vmin;
     padding-bottom: 2vmin;
-    gap: 2.5vmin;
-    width: 72vmin;
-    justify-content: center;
+    gap: 2vmin;
+    /* width: auto; */
+    width: 74vmin; 
+    justify-content: space-evenly;
     cursor: grab;
 }
 
 #play-buttons > div {
     border: .4vmin solid black;
-    background-color: aliceblue; 
+    background-color: aliceblue;
+    justify-content: space-evenly; 
     align-content: center;
     height: 5vmin;
     /* width: 8vmin; */
@@ -67,8 +78,8 @@ main {
     height: 8vh;  
     border-radius: 50%;
     border: .4vh solid black;
-    justify-content: center;
-    align-content: center;
+    justify-content: space-evenly;
+    /* align-content: center; */
     cursor: not-allowed;
 }
 
@@ -86,7 +97,7 @@ main {
         position: absolute; 
         justify-content: right;
         align-self: flex-end;
-        margin-right: 0;
+        margin-right: 10px;
         text-align: right;
     }
 }

@@ -1,106 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Connect Four</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script defer src="js/main.js"></script>
-    </head>
-    <body>
-        <header>
-            <h1 id="game-title">CONNECT FOUR</h1>
-            <h3>Click any of the buttons to play!</h3>
-            <h2 id="game-status">Game Status</h2>
-        </header>
-        <main>
-            <section id="play-buttons">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </section>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connect Four</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1 id="game-title">CONNECT FOUR</h1>
+        <h3>Click any of the buttons to play!</h3>
+        <h2 id="game-status">Game Status</h2>
+    </header>
+    <main>
+        <section id="play-buttons">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section> 
         
-            <table id="board" class="board">
-                <tr>
-                    <td id="col0row5"><button type="button"></button></td>
-                    <td id="col1row5"><button type="button"></button></td>
-                    <td id="col2row5"><button type="button"></button></td>
-                    <td id="col3row5"><button type="button"></button></td>
-                    <td id="col4row5"><button type="button"></button></td>
-                    <td id="col5row5"><button type="button"></button></td>
-                    <td id="col6row5"><button type="button"></button></td>
-                </tr>
-                <tr>
-                    <td id="col0row4"><button type="button"></button></td>
-                    <td id="col1row4"><button type="button"></button></td>
-                    <td id="col2row4"><button type="button"></button></td>
-                    <td id="col3row4"><button type="button"></button></td>
-                    <td id="col4row4"><button type="button"></button></td>
-                    <td id="col5row4"><button type="button"></button></td>
-                    <td id="col6row4"><button type="button"></button></td>
-                </tr>
-                <tr>
-                    <td id="col0row3"><button type="button"></button></td>
-                    <td id="col1row3"><button type="button"></button></td>
-                    <td id="col2row3"><button type="button"></button></td>
-                    <td id="col3row3"><button type="button"></button></td>
-                    <td id="col4row3"><button type="button"></button></td>
-                    <td id="col5row3"><button type="button"></button></td>
-                    <td id="col6row3"><button type="button"></button></td>
-                </tr>
-                <tr>
-                    <td id="col0row2"><button type="button"></button></td>
-                    <td id="col1row2"><button type="button"></button></td>
-                    <td id="col2row2"><button type="button"></button></td>
-                    <td id="col3row2"><button type="button"></button></td>
-                    <td id="col4row2"><button type="button"></button></td>
-                    <td id="col5row2"><button type="button"></button></td>
-                    <td id="col6row2"><button type="button"></button></td>
-                </tr>
-                <tr>
-                    <td id="col0row1"><button type="button"></button></td>
-                    <td id="col1row1"><button type="button"></button></td>
-                    <td id="col2row1"><button type="button"></button></td>
-                    <td id="col3row1"><button type="button"></button></td>
-                    <td id="col4row1"><button type="button"></button></td>
-                    <td id="col5row1"><button type="button"></button></td>
-                    <td id="col6row1"><button type="button"></button></td>
-                </tr>
-                <tr>
-                    <td id="col0row0"><button type="button"></button></td>
-                    <td id="col1row0"><button type="button"></button></td>
-                    <td id="col2row0"><button type="button"></button></td>
-                    <td id="col3row0"><button type="button"></button></td>
-                    <td id="col4row0"><button type="button"></button></td>
-                    <td id="col5row0"><button type="button"></button></td>
-                    <td id="col6row0"><button type="button"></button></td>
-                </tr>
-            </table>
-        </main>
-        <aside class="aside">
-            <span class="sound-choice">Sound On/Off</span>
-            <label class="switch">
-                <input id="sound-on" type="checkbox">
-                <span class="slider round"></span>
-                <!-- <audio id="sound" controls loop>
-                    <source src"" type="audio/">
-                </audio>  -->
-            </label>
-            <div class="scores">
-                <span class="yellow-score">Yellow Score: 0</span>
-                <span class="red-score">Red Score: 0</span>
-            </div>    
-        </aside>
-        <footer>
-            <button id="reset-game">Play Again</button>
-        </footer>
-    </body>
+        <table id="board" class="board">
+            <tr>
+                <td id="col0row5"><button type="button"></button></td>
+                <td id="col1row5"><button type="button"></button></td>
+                <td id="col2row5"><button type="button"></button></td>
+                <td id="col3row5"><button type="button"></button></td>
+                <td id="col4row5"><button type="button"></button></td>
+                <td id="col5row5"><button type="button"></button></td>
+                <td id="col6row5"><button type="button"></button></td>
+            </tr>
+            <tr>
+                <td id="col0row4"><button type="button"></button></td>
+                <td id="col1row4"><button type="button"></button></td>
+                <td id="col2row4"><button type="button"></button></td>
+                <td id="col3row4"><button type="button"></button></td>
+                <td id="col4row4"><button type="button"></button></td>
+                <td id="col5row4"><button type="button"></button></td>
+                <td id="col6row4"><button type="button"></button></td>
+            </tr>
+            <tr>
+                <td id="col0row3"><button type="button"></button></td>
+                <td id="col1row3"><button type="button"></button></td>
+                <td id="col2row3"><button type="button"></button></td>
+                <td id="col3row3"><button type="button"></button></td>
+                <td id="col4row3"><button type="button"></button></td>
+                <td id="col5row3"><button type="button"></button></td>
+                <td id="col6row3"><button type="button"></button></td>
+            </tr>
+            <tr>
+                <td id="col0row2"><button type="button"></button></td>
+                <td id="col1row2"><button type="button"></button></td>
+                <td id="col2row2"><button type="button"></button></td>
+                <td id="col3row2"><button type="button"></button></td>
+                <td id="col4row2"><button type="button"></button></td>
+                <td id="col5row2"><button type="button"></button></td>
+                <td id="col6row2"><button type="button"></button></td>
+            </tr>
+            <tr>
+                <td id="col0row1"><button type="button"></button></td>
+                <td id="col1row1"><button type="button"></button></td>
+                <td id="col2row1"><button type="button"></button></td>
+                <td id="col3row1"><button type="button"></button></td>
+                <td id="col4row1"><button type="button"></button></td>
+                <td id="col5row1"><button type="button"></button></td>
+                <td id="col6row1"><button type="button"></button></td>
+            </tr>
+            <tr>
+                <td id="col0row0"><button type="button"></button></td>
+                <td id="col1row0"><button type="button"></button></td>
+                <td id="col2row0"><button type="button"></button></td>
+                <td id="col3row0"><button type="button"></button></td>
+                <td id="col4row0"><button type="button"></button></td>
+                <td id="col5row0"><button type="button"></button></td>
+                <td id="col6row0"><button type="button"></button></td>
+            </tr>
+        </table>
+    </main>
+    <aside class="aside">
+        <span class="sound-choice">Sound On/Off</span>
+        <label class="switch">
+            <input id="sound-on" type="checkbox">
+            <span class="slider round"></span>
+            <!-- <audio id="sound" controls loop>
+                <source src"" type="audio/">
+            </audio>  -->
+        </label>
+        <div class="scores">
+            <span class="yellow-score">Yellow Score: 0</span>
+            <span class="red-score">Red Score: 0</span>
+        </div>    
+    </aside>
+    <footer>
+        <button id="reset-game">Play Again</button>
+    </footer>
+</body>
 </html>
 
