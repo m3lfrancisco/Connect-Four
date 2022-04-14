@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Connect Four</title>
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lemon" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script defer src="js/main.js"></script>
 </head>
@@ -13,7 +15,7 @@
     <header>
         <h1 id="game-title">CONNECT FOUR</h1>
         <h3>Click any of the buttons to play!</h3>
-        <h2 id="game-status">Game Status</h2>
+        <h2 id="message"></h2>
     </header>
     <main>
         <section id="play-buttons">
@@ -77,19 +79,22 @@
         </section>    
     </main>
     <aside class="aside">
-        <span class="sound-choice">Sound On/Off</span>
-        <label class="switch">
-            <input id="sound-on" type="checkbox">
-            <span class="slider round"></span>
-            <!-- <audio id="sound" controls loop>
-                <source src"" type="audio/">
-            </audio>  -->
-        </label>
+        <div id="sound-choice">
+            <span>Sound On/Off</span>
+            <label class="switch">
+                <input id="sound-on" type="checkbox">
+                <span class="slider round"></span>
+                <!-- <audio id="sound" controls loop>
+                    <source src"" type="audio/">
+                </audio>  -->
+            </label>
+        </div>
         <div class="scores">
-            <span class="yellow-score">Yellow Score: 0</span>
-            <span class="red-score">Red Score: 0</span>
-        </div>    
+            <p class="yellow-score">Yellow Score: <span>0</span></p>
+            <p class="red-score">Red Score: <span>0</span></p>
+        </div>
     </aside>
+    
     <footer>
         <button id="reset-game">Play Again</button>
     </footer>
