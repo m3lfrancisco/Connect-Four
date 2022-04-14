@@ -7,48 +7,42 @@ body {
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-    height: 100dvh;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Lemon', cursive, sans-serif;
+    background-image: linear-gradient(to right top, #ef91c6, #ea8dcd, #e38ad4, #d987dc, #ce86e4, #b394f3, #96a0fc, #78abff, #53c0ff, #46d2fe, #5ee1f2, #85ede6);
 }
-
-/* header {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
-} */
 
 #game-title { 
-    font-size: 2.5vw;
-    margin: 1vmin;
+    font-size: 5vh;
+    margin: 1.5vmin;
     text-align: center;
+    color: #D6279B;
+    animation: slideInDown;
+    animation-duration: 2s; 
 } 
 
-h3 {
-    font-size: 1.5vw;
-    margin: 2vmin;
+h2, h3 {
+    font-size: 3vh;
+    margin: 1.5vmin;
     text-align: center;
-}
-
-h2 {
-    font-size: 1.5vw;
-    text-align: center;
+    color: #696969;
 }
 
 main {
-    display: grid;
-    background-color: blue;
+    background-color: #66DBE2;
     border: .3vh solid black;
-    /* width: 50vw; */
+    border-radius: 5%;
 }
 
 #board {
+    display: grid;
     grid-template-columns: repeat(7, 8vmin);
     grid-template-rows: repeat(6, 8vmin);
-    /* gap: 2vmin; */
+    gap: 2.3vmin;
     height: 60vmin;
-    /* width: auto; */
     width: 74vmin;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 #play-buttons {
@@ -56,8 +50,7 @@ main {
     grid-template-columns: repeat(7, 8vmin);
     padding-top: 1.5vmin;
     padding-bottom: 2vmin;
-    gap: 2vmin;
-    /* width: auto; */
+    gap: 1vmin;
     width: 74vmin; 
     justify-content: space-evenly;
     cursor: grab;
@@ -65,50 +58,99 @@ main {
 
 #play-buttons > div {
     border: .4vmin solid black;
-    background-color: aliceblue;
-    justify-content: space-evenly; 
-    align-content: center;
+    background-color: #FAF4E0;
     height: 5vmin;
-    /* width: 8vmin; */
     cursor: grab;
 } 
 
-.board button {
-    width: 8vh;
-    height: 8vh;  
+#play-buttons > div:hover {
+    background-color: #00ACAF;
+}
+
+#board > div {
     border-radius: 50%;
     border: .4vh solid black;
-    justify-content: space-evenly;
-    /* align-content: center; */
     cursor: not-allowed;
 }
 
 #reset-game {
-    font-size: 3vmin;
-    margin: 2vmin;
+    font-size: 3vh;
+    margin: 1vmin;
     padding: 1vmin;
     border-radius: 2vmin;
     cursor: grab;
+    background-color: #00CDC2;
+    color: #FFFFFF;
 }
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sound-choice {
+    font-size: 3vh;
+    margin: 2vmin;
+    color: #696969;
+}
+
+.scores {
+    font-size: 3vh;
+    color: #696969;
+} 
+
+.yellow-score {
+    color: #F2F680;
+}
+
+.red-score {
+    color: #C81A1E;
+}
+
+/* 1000px and below */
+/* @media only screen and (max-width: 650px) { 
+    body {
+        margin: auto;
+    }
+    .aside {
+       margin: auto; 
+    }
+    #sound-choice {
+        margin: auto;
+    }
+    .scores {
+        margin: auto;
+        padding: 0;
+    }
+    .yellow-score {
+        margin: auto;
+    }
+    .red-score {
+        margin: auto;
+    }
+}   */
 
 /* 1000px and above */
 @media only screen and (min-width: 1000px){
     .aside {
-        position: absolute; 
+        position: fixed; 
         justify-content: right;
         align-self: flex-end;
-        margin-right: 10px;
-        text-align: right;
+        margin-right: 5vmin;
+        text-align: center;
     }
-}
-
+} 
 
 /* The switch - the box around the slider */
 .switch {
     position: relative;
     display: inline-block;
+    vertical-align: middle;
     width: 60px;
     height: 34px;
+    /* width: 9vmin;
+    height: 5.6vmin; */
 }
 
 /* Hide default HTML checkbox */
@@ -134,6 +176,10 @@ main {
 .slider:before {
     position: absolute;
     content: "";
+    /* height: 4vmin;
+    width: 3vmin;
+    left: 1vmin;
+    bottom: 1vmin; */
     height: 26px;
     width: 26px;
     left: 4px;
