@@ -4,19 +4,27 @@
 
 **Connect Four** (also known as **Four Up**, **Plot Four**, **Find Four**, **Four in a Row**, and **Drop Four**) is a two-player connection board game, in which the players choose a color and then take turns dropping colored tokens into a seven-column, six-row vertically suspended grid. The pieces fall straight down, occupying the lowest available space within the column. The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's tokens. The game was first sold under the *Connect Four* trademark by Milton Bradley in February 1974. 
 
-![Connect Four Browser Game Image](file:///Users/melsmacbookpro/Documents/Screen%20Shot%202022-04-15%20at%2012.20.38%20AM.png)
+![Connect Four Browser Game Screenshot](https://imgur.com/Ufwgo1b)
 
 ## Technologies Used
 
-*[HTML](https://www.w3schools.com/html/) 
-*[CSS](https://www.w3schools.com/cssref/) 
-*[JavaScript](https://developer.mozilla.org/en-US/) 
-*[jQuery](https://api.jquery.com/) 
-*[Whimsical](https://whimsical.com) 
-*[GitHub](https://github.com/) 
-*[ColorSpace](https://mycolor.space/) 
-*[Animate.css](https://animate.style/) 
-*[Netlify](https://netlify.com) 
+[HTML](https://www.w3schools.com/html/)
+
+[CSS](https://www.w3schools.com/cssref/)
+
+[JavaScript](https://developer.mozilla.org/en-US/) 
+
+[jQuery](https://api.jquery.com/) 
+
+[Whimsical](https://whimsical.com) 
+
+[GitHub](https://github.com/) 
+
+[ColorSpace](https://mycolor.space/) 
+
+[Animate.css](https://animate.style/) 
+
+[Netlify](https://netlify.com) 
 
 ## Getting Started
 
