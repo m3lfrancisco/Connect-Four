@@ -8,7 +8,6 @@ const mark = {
 const totalMoves = 42;
 
 /*----- app's state (variables) -----*/
-
 let board;
 let playerTurn; // 1, -1
 let movesMade;
@@ -17,29 +16,16 @@ let yellowScore = 0;
 let redScore = 0;
 
 /*----- cached element references -----*/
-const playButtons = [...document.querySelectorAll('#play-buttons > div')];
+const playButtonsArr = Array.from(document.querySelectorAll('#play-buttons > div'));
 const gameStatus = document.getElementById('message');
 const yellowPlayer = document.querySelector('.yellow-score');
 const redPlayer = document.querySelector('.red-score');
-// const music = document.getElementById('#sound');
-// const playSound = document.getElementById('#sound-on');
-// const resetButton = document.getElementById('#reset-game');
-// const winSound
 
 /*----- event listeners -----*/
-// document.getElementById('play-buttons').addEventListener('click', handleMove);
-// document.getElementById('reset-game').addEventListener('click', init);
-// document.getElementById('sound-on').addEventListener('click', toggleSound);
-
 $('#play-buttons').on('click', 'div', handleMove);
 $('#reset-game').on('click', init);
-// $('#sound-on').on('click', toggleSound);
 
 /*----- functions -----*/
-// function toggleSound() {
-//      playSound.on ? music.play() : music.pause();
-// }
-
 init();
 
 function init() {
@@ -59,28 +45,28 @@ function init() {
 };
 
 function render() {
-    // iterate over each column in the board
-    board.forEach(function(column, columnIndex) {
+    // iterate over each column on the board
+    board.forEach((column, columnIndex) => {
         // iterate over each cell in the column
-        column.forEach(function(cell, cellIndex) {
+        column.forEach((cell, cellIndex) => {
             // find the specific cell using columnIndex and cellIndex
-            let tableCell = document.getElementById(`col${columnIndex}row${cellIndex}`);
-            tableCell.style.backgroundColor = mark[cell];
+            let boardCell = document.getElementById(`col${columnIndex}row${cellIndex}`);
+            boardCell.style.backgroundColor = mark[cell];
         });
         // If column is filled, hide play button
-        playButtons[columnIndex].style.visibility = column.includes(0) ? 'visible' : 'hidden';
+        playButtonsArr[columnIndex].style.visibility = column.includes(0) ? 'visible' : 'hidden';
     });
 
     // render game status message
     if (winner === 'T') {
-      message.innerText = "It's a Tie!";  
+        message.innerText = "It's a Tie!";  
     } else if (winner) {
         if (winner === 1) {
             yellowScore++
-            yellowPlayer.innerText = `${yellowScore}`;
+            yellowPlayer.innerText = `Yellow Score: ${yellowScore}`;
         } else if (winner === -1) {
             redScore++
-            redPlayer.innerText = `${redScore}`;
+            redPlayer.innerText = `Red Score: ${redScore}`;
         }
         message.innerText = `${winner === 1 ? 'YELLOW' : 'RED'} wins the game!`;
     } else {
@@ -89,22 +75,21 @@ function render() {
 };
 
 function handleMove(evt) {
-    // The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
-    // Looking for the corresponding column index the playButtons was clicked 
-    const columnIdx = playButtons.indexOf(evt.target);
+    // Look for the corresponding column index the playButtons was clicked 
+    const columnIdx = playButtonsArr.indexOf(evt.target);
         if (columnIdx === -1 || winner) return;
-        const columnArr = board[columnIdx];
-        // The provided index is 0, so the entire array will be searched.
-        const rowIdx = columnArr.indexOf(0);
-            if (rowIdx === -1) return;
-
+    const columnArr = board[columnIdx];
+    // The provided index is 0, so the entire array will be searched.
+    const rowIdx = columnArr.indexOf(0);
+        if (rowIdx === -1) return;
+    
     columnArr[rowIdx] = playerTurn;
     movesMade++;
     playerTurn *= -1;
-
+    
     winner = checkForWin(columnIdx, rowIdx);
     render();
-}
+};
 
 function checkForWin() {
     // Check for a tie
@@ -117,7 +102,7 @@ function checkForWin() {
         if (winner) break; 
     }
     return winner;
-}
+};
 
 // Check index of column in the board 2d array
 function checkColumn(columnIdx) {
@@ -132,7 +117,7 @@ function checkColumn(columnIdx) {
 };
 
 function checkDiagonal(columnIdx, rowIdx, direction) {
-    // Boundary check
+    // Check for out of bounds
     if (direction > 0 && columnIdx > 3 || direction > 0 && rowIdx > 2) return null;
     if (direction < 0 && columnIdx > 3 || direction < 0 && rowIdx < 3) return null;
     
@@ -145,25 +130,25 @@ function checkDiagonal(columnIdx, rowIdx, direction) {
 };
 
 function checkHorizontal(columnIdx, rowIdx) {
-    // Boundary check
+    // Check for out of bounds
     if (columnIdx > 3) return null;
 
     // Add the value of all spaces to the right of columnIdx and look for +4 or -4
-    // then return the value of +4 using Math.abs to get the winner
+    // then use Math.abs to return the absolute value of 4 to get the winner
     if (Math.abs(board[columnIdx][rowIdx] + board[columnIdx + 1][rowIdx] + 
         board[columnIdx + 2][rowIdx] + board[columnIdx + 3][rowIdx]) === 4) {
-            return board [columnIdx][rowIdx];
-        } else {
-            return null;
-        }
+        return board [columnIdx][rowIdx];
+    } else {
+        return null;
+    }
 };
 
 function checkVertical(columnArr, rowIdx) {
-    // Boundary check
+    // Check for out of bounds
     if (rowIdx > 2) return null;
 
     // Add the value of all spaces above row index and look for +4 or -4
-    // then return the value of +4 using Math.abs to get the winner
+    // then use Math.abs to return the absolute value of 4 to get the winner
     if (Math.abs(columnArr[rowIdx] + columnArr[rowIdx + 1] + columnArr[rowIdx + 2] + columnArr[rowIdx + 3]) === 4) {
         return columnArr[rowIdx];
     } else {
