@@ -4,7 +4,7 @@
 
 **Connect Four** (also known as **Four Up**, **Plot Four**, **Find Four**, **Four in a Row**, and **Drop Four**) is a two-player connection board game, in which the players choose a color and then take turns dropping colored tokens into a seven-column, six-row vertically suspended grid. The pieces fall straight down, occupying the lowest available space within the column. The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's tokens. The game was first sold under the *Connect Four* trademark by Milton Bradley in February 1974. 
 
-![Connect Four Browser Game Screenshot](https://imgur.com/Ufwgo1b)
+![Connect Four Browser Game Screenshot](https://imgur.com/Ufwgo1b.png)
 
 ## Technologies Used
 
@@ -24,7 +24,9 @@
 
 [Animate.css](https://animate.style/) 
 
-[Netlify](https://netlify.com) 
+[Netlify](https://netlify.com)
+
+[Imgur](https://imgur.com/)
 
 ## Getting Started
 
