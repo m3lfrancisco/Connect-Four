@@ -20,12 +20,20 @@ const playButtonsArr = Array.from(document.querySelectorAll('#play-buttons > div
 const gameStatus = document.getElementById('message');
 const yellowPlayer = document.querySelector('.yellow-score');
 const redPlayer = document.querySelector('.red-score');
+const music = document.getElementById('sound');
+const playSound = document.getElementById('sound-on');
+const audio = document.getElementById('clack');
 
 /*----- event listeners -----*/
 $('#play-buttons').on('click', 'div', handleMove);
 $('#reset-game').on('click', init);
+$('#sound-on').on('click', toggleSound);
 
 /*----- functions -----*/
+function toggleSound() {
+    playSound.checked ? music.play() : music.pause();
+}
+
 init();
 
 function init() {
@@ -89,6 +97,7 @@ function handleMove(evt) {
     
     winner = checkForWin(columnIdx, rowIdx);
     render();
+    audio.play();
 };
 
 function checkForWin() {
