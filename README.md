@@ -38,7 +38,7 @@ This is my first project for **General Assembly's Software Engineering Immersive
 
 ## Getting Started
 
-<a href="https://connectfourmyf.netlify.app/" target="_blank">Play the Game!</a>
+### [Play the Game!](https://connectfourmyf.netlify.app/)
 
 To start the game, click any of the rectangles on the top of the board. Yellow goes first, then red. The first player to get four of their tokens in a row, either horizontally, vertically, or diagonally, wins! If you want to play again, just click the play again button located on the bottom of the board. You can play as many times as you want, and as long as you don't close your browser, the app keeps track of your scores. Also there is a toggle switch if you want some background music while you play. 
 
