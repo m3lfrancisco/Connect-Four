@@ -82,6 +82,14 @@
     </main>
     
     <aside class="aside">
+        <div id="sound-choice">
+            <span>Sound On/Off</span>
+            <label class="switch">
+                <input id="sound-on" type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <audio id="sound" src="audio/project1music.mp3" type="audio/mpeg" loop volume=".1"></audio>
+        </div>
         <div class="scores">
             <p class="yellow-score">Yellow Score: <span>0</span></p>
             <p class="red-score">Red Score: <span>0</span></p>
@@ -91,5 +99,7 @@
     <footer>
         <button id="reset-game">Play Again</button>
     </footer>
+
+    <audio id="clack" src="audio/billiard-ball-clack.wav" volume=".5"></audio>
 </body>
 </html>
